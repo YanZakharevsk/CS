@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      - file: db/changelog/001-create-users.yaml
+  - include:
+      - file: db/changelog/003-create-contacts.yaml
+  - include:
+      - file: db/changelog/002-add-phoneNumber-users.yaml
+
+  - include:
+      - file: db/changelog/004-create_user_contacts.yaml
+
+  - include:
+      - file: db/changelog/005-add-foreighn-key-for-contacts.yaml
