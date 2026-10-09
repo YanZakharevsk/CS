@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: auth-service-keycloak
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  config:
+    import: optional:file:.env[.properties]
+
+  jpa:
+    show-sql: true
+
+
+
+

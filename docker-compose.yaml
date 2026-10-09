@@ -1,0 +1,17 @@
+services:
+
+  auth-keycloak-postgres:
+    image: postgres:17
+    container_name: auth_keycloak_postgres
+    restart: on-failure
+    environment:
+      POSTGRES_DB: auth-keycloak-service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - auth_keycloak_postgres_data:/var/lib/postgresql/data
+volumes:
+  auth_keycloak_postgres_data:
+
